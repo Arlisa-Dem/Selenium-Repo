@@ -1,0 +1,24 @@
+1. WebDriver
+WebDriver is an important API in selenium
+We use WebDriver to create driver object(chrome driver, safari, edge, firefox, headless,..)
+2. Job title
+-QA Engineer, Quality Assurance, SDET, …..
+-If there is Selenium keyword in job description, you can apply
+3. Framework
+It is a combination of packages, classes, methods to keep our codes organized.
+4. Manual vs Automation
+Automation is simply done for keeping the test step stable and execution test cases faster
+5. Advantages & Disadvantages
+Selenium is number 1 WEB APPLICATION TESTING TOOL, open source, has large user base, works with multiple browsers, and languages
+Cannot automate mobile and desktop applications with out 3rd party tools such as Appium and Auto IT, cannot handle captcha, no professional customer support
+6. Functional & Non Functional Testing
+Functionality is the answer of what should be done(button click, search, check out,…), non - functional is the answer of how should be done(performance, security,…)
+7. Testing Types
+Static: done without code such as document review
+Dynamic(non-static): done with some type of coding(functional and non functional)
+8. Selenium Architecture
+W3C protocol
+There is request and response between client side (selenium binding) and server side(drivers)
+9. Selenium framework installation
+We need to be organized to create a framework
+We use dependencies in MAVEN project to add selenium, WebDriver, junit, testNG, cucumber,….
