@@ -25,6 +25,10 @@ public class Day02_GetPageSource {
         }
             driver.quit();
     }
-
+    /*
+     driver.get("https://www.amazon.com");
+        String pageSource = driver.getPageSource();
+       assertTrue(driver.getPageSource().contains("Registry"));
+     */
 
 }
