@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class Day03_Locators {
 
@@ -22,6 +23,10 @@ And enter username
 And enter password
 And click on submit button
 Then verify the login is successful
+Click on logout options
+When  Click on updated collings options
+And Click on logout option
+Then  verify the logout is successful
 */
 
     WebDriver driver;
@@ -56,13 +61,27 @@ Then verify the login is successful
 //        Then verify the login is successful
         String url = driver.getCurrentUrl();
         assertEquals("Url did not match","https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index",url);
+        assertTrue(driver.getCurrentUrl().contains("dashboard"));
         Thread.sleep(3000);
 
+        //When  Click on updated collings options
+        driver.findElement(By.className("oxd-userdropdown")).click();
+        Thread.sleep(3000);
+
+        //And Click on logout option
+        driver.findElement(By.linkText("Logout")).click();
+
+        //Then  verify the logout is successful
+       assertTrue(driver.findElement(By.xpath("//h5[@class='oxd-text oxd-text--h5 orangehrm-login-title']")).isDisplayed());
+       String loginText = driver.findElement(By.tagName("h5")).getText();
+       assertEquals("Login",loginText);
     }
 
     @After
-    public void tearDown(){
-        driver.close();
+    public void tearDown() throws InterruptedException {
+        Thread.sleep(3000);
+        driver.quit();
     }
+
 
 }
