@@ -22,3 +22,15 @@ There is request and response between client side (selenium binding) and server 
 9. Selenium framework installation
 We need to be organized to create a framework
 We use dependencies in MAVEN project to add selenium, WebDriver, junit, testNG, cucumber,….
+
+----------------------------------------------------------------------
+Webdriver driver;
+1-      Xpath;           driver.findElement(By.xpath (“//tag[@attribute name= ‘value’]”)); --
+	                   driver.findElement(By.xpath (“ //tag [contains/starts-with/ends-with(@attribute,’value’)]”));
+2-      İd:                 driver. findElement(By.id(“box1”));
+3-      Name:          driver.findElement(By.name(“checkbox1”));
+4-       cssSelector: driver.findElement (By.cssSelector (“tag[attribute = ‘value’]);
+5-       Link:              driver.findElement (By.linkText (“logout”));
+6-      tagName :    driver.findElement (By.tagName(“button”));
+7-      className:   driver.findElement (By.className(“oxd-button oxd-button”));
+8-      PartialLink:   driver.findElement (By.partialLinkText(“oxd-bu”));
