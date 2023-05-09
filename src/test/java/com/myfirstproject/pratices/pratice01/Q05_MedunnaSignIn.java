@@ -4,6 +4,8 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import utilities.TestBase;
 
+import static org.junit.Assert.assertEquals;
+
 public class Q05_MedunnaSignIn extends TestBase{
 
 @Test
@@ -31,7 +33,8 @@ public class Q05_MedunnaSignIn extends TestBase{
     driver.findElement(By.xpath("//button[@type='submit']")).click();
 
     //Assert that you signed in
-    //Homework...
+    assertEquals("WELCOME TO MEDUNNA",driver.findElement(By.xpath("//h1[text()='Welcome to MEDUNNA']")).getText());
+
 
 }
 

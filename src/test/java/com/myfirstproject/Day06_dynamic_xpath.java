@@ -18,7 +18,7 @@ public class Day06_dynamic_xpath  extends TestBase {
 //        //tag[.='full visible text of the element']
         String userNameText = driver.findElement(By.xpath("//p[text()='Username : Admin']")).getText();
         Assert.assertEquals("Username : Admin", userNameText);
-//Alternatively
+//        Alternatively
 //        WebElement userName =  driver.findElement(By.xpath("//p[text()='Username : Admin']"));
 //        Assert.assertEquals("Username : Admin",userName.getText());
 //        //tag[contains(@attr,'partial or full value of that attribute')]

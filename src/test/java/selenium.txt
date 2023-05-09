@@ -24,6 +24,30 @@ We need to be organized to create a framework
 We use dependencies in MAVEN project to add selenium, WebDriver, junit, testNG, cucumber,….
 
 ----------------------------------------------------------------------
+Absolute xpath
+/ used
+You cannot skip a child to go to the next
+element
+You have to go to child element one by one from
+parent to child
+You cannot go to a certain element easily if the
+html is longer
+Absolute xpath is not recommended to use
+because it can easily be broken when a new
+element is added on the page
+
+
+Relative xpath
+// is used
+You can skip a child to go to the next element
+You can go to a certain element easily if the
+html is longer
+Relative xpath is recommended to use
+because there are multiple ways to write
+dynamic xpath
+
+
+----------------------------------------------------------------------
 Webdriver driver;
 1-      Xpath;           driver.findElement(By.xpath (“//tag[@attribute name= ‘value’]”)); --
 	                   driver.findElement(By.xpath (“ //tag [contains/starts-with/ends-with(@attribute,’value’)]”));

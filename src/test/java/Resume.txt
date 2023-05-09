@@ -69,5 +69,6 @@
       Project dates must be in month-year format.
       try to use creative and specific words when expressing what you did in the project
       Language
-     indicate your english level
+     indicate your english leveltermä
      Do not add if you speak Turkish and Russian languages.
+
