@@ -17,7 +17,7 @@ Functionality is the answer of what should be done(button click, search, check o
 Static: done without code such as document review
 Dynamic(non-static): done with some type of coding(functional and non functional)
 8. Selenium Architecture
-W3C protocol
+W3C protocolk
 There is request and response between client side (selenium binding) and server side(drivers)
 9. Selenium framework installation
 We need to be organized to create a framework
