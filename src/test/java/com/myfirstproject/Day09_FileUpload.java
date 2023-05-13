@@ -34,7 +34,7 @@ Then verify the File Uploaded!  Message displayed
 
         //        When user selects an image from the desktop
         System.getProperty("user.home");
-        String pathOfFile =System.getProperty("user.home")+"/OneDrive/Desktop/file.img";
+        String pathOfFile =System.getProperty("user.home")+"/OneDrive/Desktop/flower.jpeg.txt";
         WebElement chooseFileInput = driver.findElement(By.id("file-upload"));
         Thread.sleep(2000);
         chooseFileInput.sendKeys(pathOfFile);
@@ -42,6 +42,7 @@ Then verify the File Uploaded!  Message displayed
         //        And click on the upload button
         Thread.sleep(2000);
         driver.findElement(By.id("file-submit")).click();
+
 
 
         //        Then verify the File Uploaded!  Message displayed

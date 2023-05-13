@@ -37,11 +37,10 @@ public class Day08_Actions2 extends TestBase {
         Actions actions = new Actions(driver);
         actions.moveToElement(menu).perform();//This will take the mouse on menu
 
-        //Now we can click on "Account" link
+        //Now we can click on “Account” link
         driver.findElement(By.linkText("Account")).click();
 
-        //Then verify the page title contains "Your Account"
+        //Then verify the page title contains “Your Account”
         assertTrue(driver.getTitle().contains("Your Account"));
-
     }
 }
