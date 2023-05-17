@@ -58,3 +58,6 @@ Webdriver driver;
 6-      tagName :    driver.findElement (By.tagName(“button”));
 7-      className:   driver.findElement (By.className(“oxd-button oxd-button”));
 8-      PartialLink:   driver.findElement (By.partialLinkText(“oxd-bu”));
+
+
+

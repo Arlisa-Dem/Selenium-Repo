@@ -109,6 +109,24 @@ public abstract class TestBase {
         String path = System.getProperty("user.dir")+"/test-output/ElementScreenshots/"+now+"image.png";
         FileUtils.copyFile(image,new File(path));
 
+    }
+
+    //This method will take the screenshot of entire page and returns image's as String
+    public static String takeScreenshotOfTheEntirePageAsString() throws IOException {
+
+        //Step 1--> TakeScreenshot class with getScreenshotAs method to capture the screenshot
+        File image = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+        //Step 2--> Create aa path to save the image
+        //Create a date for giving dynamic name
+        String now = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());//getting local date in this format
+//                     CURRENT PROJECT FOLDER         foldername   subfoldername imagename
+        String path = System.getProperty("user.dir")+"/test-output/Screenshots/"+now+"image.png";
+
+//        3. Save the image in the path as a file
+        FileUtils.copyFile(image,new File(path));
+
+        return path;
 
     }
 
