@@ -61,3 +61,12 @@ Webdriver driver;
 
 
 
+--------------------------------------------------------------------------
+
+Css is a little faster and better
+xpath navigates through the DOM(html code on the browser. Document object
+model), cssSelector locates the target without navigation
+Xpath is more common. We can write dynamic xpath to locate element
+Xpath is easier to use with index
+They have different syntax. For example, // is used in xpath but not in css
+Css locators usually same on different the browsers, so it is more reliable.

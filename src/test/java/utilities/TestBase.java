@@ -9,10 +9,7 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.File;
@@ -97,6 +94,16 @@ public abstract class TestBase {
 //        3. Save the image in the path as a file
         FileUtils.copyFile(image,new File(path));
 
+        /*
+         try {
+            FileUtils.copyFile(image,new File(path));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+//        FileUtils.copyFile(FILE,FILE PATH); COPY FILE TO THAT FILE PATH
+    }
+         */
+
 
 
     }
@@ -127,6 +134,54 @@ public abstract class TestBase {
         FileUtils.copyFile(image,new File(path));
 
         return path;
+
+    }
+
+    //JavaScript Executor Method
+    //This method scrolls in to the web element we declare in the parentheses by using JSExecutor
+    public static void scrollIntoViewJS(WebElement webElement){
+
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].scrollIntoView(true);",webElement);//varargs
+
+    }
+
+    //Scroll all the way down method by using JSExecutor
+    public static void scrollAllTheWayDownJS(){
+
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+    }
+    //Scroll all the way Up method by using JSExecutor
+    public static void scrollAllTheWayUpJS(){
+
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("window.scrollTo(0,-document.body.scrollHeight)");
+    }
+
+    //Click method by using JavaScrip executor
+    public static void clickByJS(WebElement webElement){
+
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].click();",webElement);//Webelement --> varargs using more element
+    }
+
+    //Locate web element by using JSExecutor
+    public static WebElement locateElementByJS(String id){
+
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        //Or return (WebElement) js.executeScript("return document.getElementById('"+id+"')");
+          WebElement element = (WebElement) js.executeScript("return document.getElementById('"+id+"')");
+
+            return element;
+
+    }
+
+    //This method will : Type into input method by using JSExecutor
+    public static void setValueByJS(WebElement inputElement,String text){
+
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].setAttribute('value','"+text+"')",inputElement);
 
     }
 
