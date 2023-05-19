@@ -70,3 +70,26 @@ Xpath is more common. We can write dynamic xpath to locate element
 Xpath is easier to use with index
 They have different syntax. For example, // is used in xpath but not in css
 Css locators usually same on different the browsers, so it is more reliable.
+
+
+--------------------------------------------------------------------------------
+
+
+//WAITS
+/*
+  HARD WAIT
+  Thread.sleap(3000)
+
+  IMPLICIT WAIT
+= implicit wait is used once, whenever we call the driver,
+  implicit wait applies automatically, so implicit wait is global wait
+
+   EXPLICIT WAIT
+= it is local wait, we will apply the wait on the specific elements
+  WebDriverWait object
+
+   FLUENT WAIT
+=  it is a type of explicit wait
+   we can ignore exception
+   we can put polling number = for example each 3 second try to handle
+ */

@@ -3,14 +3,12 @@ package com.myfirstproject;
 import com.github.javafaker.Faker;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import utilities.TestBase;
 
 import java.io.IOException;
-import java.util.List;
+
 
 import static org.junit.Assert.assertTrue;
 
