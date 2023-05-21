@@ -35,14 +35,14 @@ public class Day14_StaleElementReferenceException extends TestBase {
     public void staleElementReferenceExceptionTest2(){
 
         driver.get("https://www.amazon.com/");
-        WebElement registry = driver.findElement(By.xpath("//*[@id='nav-xshop']//a[11]"));
+        WebElement registry = driver.findElement(By.xpath("(//a[@data-csa-c-type='link'])[4]"));
         registry.click();
         waitFor(5);
         driver.navigate().back();
         waitFor(5);
         registry.click();//StaleElementReferenceException:
 //        SOLUTION
-        driver.findElement(By.xpath("//*[@id='nav-xshop']//a[11]")).click();
+        //driver.findElement(By.xpath("//*[//a[@data-csa-c-type='link'])[4]")).click();
 
     }
 
