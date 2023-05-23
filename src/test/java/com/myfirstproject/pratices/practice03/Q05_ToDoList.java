@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
+
 public class Q05_ToDoList extends TestBase {
 
 
@@ -26,8 +28,7 @@ Then
     Assert that all todos deleted.
  */
     @Test
-    public void toDoListTest(){
-
+    public void toDoListTest() {
 
 
         driver.get("http://webdriveruniversity.com/To-Do-List/index.html");
@@ -48,9 +49,15 @@ Then
 //        Strikethrough all todos.
 
 //        Delete all todos.
+        List<WebElement> delete = driver.findElements(By.xpath("(//span)//i"));
+        for (WebElement w : delete) {
+            w.click();
 
 //        Assert that all todos deleted.
+            String todos = driver.findElement(By.xpath("//h1")).getText();
+            assertEquals("TO-DO LIST", todos);
+
+        }
 
     }
-
 }
