@@ -111,8 +111,7 @@ public class Practice01 extends TestBase {
 
         //Draw
         WebElement canvas = driver.findElement(By.tagName("canvas"));
-        Actions builder = new Actions(driver);
-        builder.moveToElement(canvas)
+        new Actions(driver).moveToElement(canvas)
                 .clickAndHold()
                 .moveByOffset(50, 50)
                 .moveByOffset(115, 0)
@@ -122,7 +121,6 @@ public class Practice01 extends TestBase {
 
          //Clear button
         driver.findElement(By.xpath("//button[@class='button clear']")).click();
-
 
 
         }
