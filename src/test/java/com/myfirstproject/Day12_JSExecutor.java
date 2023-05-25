@@ -125,7 +125,7 @@ Take a screenshot of the page
 
 
 //        Type porcelain tea set in search box
-        WebElement searchBox = locateElementByJS("twotabsearchtextbox");
+        WebElement searchBox = locateElementsByJS("twotabsearchtextbox");
         searchBox.sendKeys("porcelain tea set");
 
 //        Click on search button
@@ -146,7 +146,7 @@ Take a screenshot of the page
         driver.get("https://www.amazon.com/");
 
         //Type
-        WebElement searchBox = locateElementByJS("twotabsearchtextbox");
+        WebElement searchBox = locateElementsByJS("twotabsearchtextbox");
         Thread.sleep(30000);
         //searchBox.sendKeys(); --> This is regular typing in Selenium. We will create a method that will type by using JSExecutor
         setValueByJS(searchBox,"porcelain tea set");

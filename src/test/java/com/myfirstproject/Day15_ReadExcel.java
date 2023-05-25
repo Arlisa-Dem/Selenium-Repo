@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
@@ -50,9 +51,41 @@ public class Day15_ReadExcel {
 //        Find the number of used row
         System.out.println("Number of used row:"+sheet1.getPhysicalNumberOfRows());//This method does not count the empty rows ,only used ones
 
-//        Print country, capitol key value pairs as map object
+//        Print country, capitol key value pairs as map object(dynamic code)
 
-        //forloop
+        System.out.println("===Homework===");
+        Map<String, String> capitals = new HashMap<>();
+        int lastRowNumber = sheet1.getLastRowNum();
 
+        for (int i = 1; i <= lastRowNumber; i++) {
+            String country = sheet1.getRow(i).getCell(0).toString();
+            String capital = sheet1.getRow(i).getCell(1).toString();
+            capitals.put(country, capital);
+        }
+
+        System.out.println("capitals = " + capitals);
+/*
+        Map<String,String> mapObject= new HashMap<>();
+        int lastRowNum = sheet1.getLastRowNum();
+
+        for (int i = 1; i <= lastRowNum; i++) {
+            Row row = sheet1.getRow(i);
+            Cell countryCell = row.getCell(0);
+            Cell capitalCell = row.getCell(1);
+
+            String country = countryCell.getStringCellValue();
+            String capital = capitalCell.getStringCellValue();
+
+            // Store country-capital pair in the map
+            mapObject.put(country, capital);
+        }
+
+        // Print the country-capital map
+        for (Map.Entry<String, String> entry : mapObject.entrySet()) {
+            System.out.println(entry.getKey() + " - " + entry.getValue());
+        }
+
+        workbook.close();
+        fileInputStream.close();*/
     }
 }
